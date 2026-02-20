@@ -1,4 +1,4 @@
-# JSON翻訳ツール (jsontrans2.py)
+# JSON翻訳ツール (jsontrans.py)
 
 ## 概要
 JSONファイルを翻訳するためのGUIツールです。マージ翻訳機能に対応しています。
@@ -16,9 +16,9 @@ JSONファイルを翻訳するためのGUIツールです。マージ翻訳機�
 3. 「翻訳する」で翻訳実行（「下書き」の有無で通常翻訳かマージ翻訳を判定）
 
 ## 必要条件
-- Python 3.x
+- Python 3.11（Argos Translateを使用しているため）
 - Argos Translate (ローカル翻訳)
-- Lingva API (オンライン翻訳)
+- Lingva API (オンライン翻訳)（任意: 自分用意してください）
 
 ## インストール
 ```bash
@@ -28,6 +28,3 @@ git clone <repository-url>
 # 必要なライブラリをインストール
 pip install tkinter argostranslate httpx
 ```
-
-## ライセンス
-MIT License
