@@ -1,39 +1,34 @@
-# JSON Translator
+# JSON翻訳ツール (jsontrans2.py)
 
-JSONファイル内のテキストを翻訳するGUIツール。
+## 概要
+JSONファイルを翻訳するためのGUIツールです。マージ翻訳機能に対応しています。
 
-## 特徴
-
-- Argos Translate（オフライン）とLingva（オンライン）の2つの翻訳エンジンに対応
-- 翻訳結果をJSON形式で保存
-- 翻訳キャッシュ機能で高速化
-- 進捗バーとキャンセル機能
-
-## 動作環境
-
-**重要**: Python 3.11が必要です。Python 3.14では動作しません。
-
-## インストール
-
-```bash
-pip install httpx argostranslate
-```
-
-## 実行
-
-```bash
-python jsontrans.py
-```
+## 主な機能
+- **翻訳**: 通常のJSON翻訳
+- **マージ翻訳**: 翻訳先ファイルの構造を維持しつつ翻訳
+- **下書き機能**: 翻訳先ファイルの読み込み・クリア
+- **進捗管理**: キャンセル・再開機能
+- **キャッシュ機能**: ArgosとLingvaで分離して管理
 
 ## 使い方
+1. 「翻訳元を開く」で翻訳元JSONファイルを選択
+2. 「下書きを開く」で翻訳先JSONファイルを選択
+3. 「翻訳する」で翻訳実行（自動で通常翻訳かマージ翻訳を判定）
+4. 「README作成」でREADME.mdを作成
 
-1. 翻訳元・翻訳先の言語を選択
-2. 翻訳エンジンを選択（Argos/Lingva）
-3. JSONファイルを開くか、テキストエリアにJSONを貼り付け
-4. 「翻訳する」をクリック
-5. 翻訳結果を保存
+## 必要条件
+- Python 3.x
+- Argos Translate (ローカル翻訳)
+- Lingva API (オンライン翻訳)
 
-## 設定
+## インストール
+```bash
+# このリポジトリをクローン
+git clone <repository-url>
 
-- `settings.json`: ウィンドウサイズとLingva URLを保存
-- `translate_cache.pkl`: 翻訳キャッシュを保存
+# 必要なライブラリをインストール
+pip install tkinter argostranslate httpx
+```
+
+## ライセンス
+MIT License
